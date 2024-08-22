@@ -10,6 +10,10 @@ using XuongMayNhom8.Repositories.Repositories.UserRepository;
 using XuongMayNhom8.Services.Services.UserService;
 using XuongMayNhom8.Services.Services.OrderService;
 using XuongMayNhom8.Repositories.Repositories.OrderRepository;
+using XuongMayNhom8.Repositories.Repositories.CategoryRepository;
+using XuongMayNhom8.Services.Services.CategoryService;
+using XuongMayNhom8.Repositories.Repositories.ProductRepository;
+using XuongMayNhom8.Services.Services.ProductService;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,11 +29,20 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<XmbeContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
+#region Repositories
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICategoryRepository<Danhmuc>, CategoryRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+#endregion
 
-<<<<<<< HEAD
+#region Services
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+#endregion
+
 var jwtSettings = builder.Configuration.GetSection("Jwt").Get<JwtSetting>();
 builder.Services.AddAuthentication(options =>
 {
@@ -54,11 +67,6 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminPolicy", policy => policy.RequireRole("Admin"));
     options.AddPolicy("ManagerPolicy", policy => policy.RequireRole("Manager"));
 });
-=======
-//regis DI
-builder.Services.AddTransient<IOrderRepository<Donhang>, OrderRepository<Donhang>>();
-builder.Services.AddTransient<IOrderService<Donhang>, OrderService<Donhang>>();
->>>>>>> chuyen_task_feature
 
 var app = builder.Build();
 

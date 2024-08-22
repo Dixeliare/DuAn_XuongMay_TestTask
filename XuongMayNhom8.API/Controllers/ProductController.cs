@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using XuongMayNhom8.Repositories.Models;
+using XuongMayNhom8.Services.Services.ProductService;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,36 +10,61 @@ namespace XuongMayNhom8.API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        // GET: api/<ProductController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly IProductService _context;
+        public ProductController(IProductService context)
         {
-            return new string[] { "value1", "value2" };
+            _context = context;
+        }
+        // GET: api/<ProductController>
+        [HttpGet("products")]
+        public async Task<IEnumerable<Sanpham>> GetAll()
+        {
+            return await _context.GetAllProducts();
         }
 
         // GET api/<ProductController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("products/{id}")]
+        public async Task<ActionResult<Sanpham>> GetProduct(int id)
         {
-            return "value";
+            var pro = await _context.GetProduct(i => i.Masp == id);
+            if (pro == null)
+            {
+                return NotFound("Product does not exist !!!");
+            }
+            return Ok(pro);
         }
 
         // POST api/<ProductController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("products")]
+        public async Task<ActionResult<Sanpham>> Create([FromBody] Sanpham value)
         {
+            await _context.CreatePro(value);
+            return CreatedAtAction(nameof(Create), value.GetHashCode(), value);
         }
 
         // PUT api/<ProductController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("products/{id}")]
+        public async Task<ActionResult<Sanpham>> Update(int id, [FromBody] Sanpham value)
         {
+            var pro = await _context.GetProduct(i => i.Masp == id);
+            if (pro == null)
+            {
+                return BadRequest("No product was found !");
+            }
+            await _context.UpdateProduct(id, value);
+            return Ok(pro);
         }
 
         // DELETE api/<ProductController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("products/{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
+            var result = await _context.DeletePro(id);
+            if (!result)
+            {
+                return NotFound("Product does not exist !");
+            }
+            return NoContent();
         }
     }
 }
