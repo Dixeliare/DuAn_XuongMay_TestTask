@@ -2766,19 +2766,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\daoxu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Services\\XuongMayNhom8.Services.csproj",
+      "projectUniqueName": "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Services\\XuongMayNhom8.Services.csproj",
       "projectName": "XuongMayNhom8.Services",
-      "projectPath": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Services\\XuongMayNhom8.Services.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Services\\obj\\",
+      "projectPath": "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Services\\XuongMayNhom8.Services.csproj",
+      "packagesPath": "C:\\Users\\daoxu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Services\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\daoxu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2793,8 +2798,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {
-              "projectPath": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj"
+            "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {
+              "projectPath": "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj"
             }
           }
         }

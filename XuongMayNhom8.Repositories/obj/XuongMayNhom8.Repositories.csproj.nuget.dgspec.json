@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {}
+    "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {}
   },
   "projects": {
-    "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {
+    "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj",
         "projectName": "XuongMayNhom8.Repositories",
-        "projectPath": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "L:\\source\\repos\\XMBE\\XuongMayNhom8.Repositories\\obj\\",
+        "projectPath": "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Repositories\\XuongMayNhom8.Repositories.csproj",
+        "packagesPath": "C:\\Users\\daoxu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\daoxu\\OneDrive\\Tài liệu\\GitHub\\DuAn_XuongMay_TestTask\\XuongMayNhom8.Repositories\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\daoxu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
